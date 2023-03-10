@@ -128,7 +128,7 @@ The number is 3
 The number is 3
 
 
-=======================================
+<<<<<<<>>>>>>>=======================================>>>>>
 -->closures aas pass ke enviroment ko yadd rkhta h. that is called closures
 -->closures remembers its enviroment.
 --> higher order function takes function and return function or both
@@ -145,4 +145,41 @@ let result = outer();
 result();
 
 o/p ===>inner 10 20
+
+
+function init() {
+  var name = "Mozilla"; // name is a local variable created by init
+  function displayName() {
+    // displayName() is the inner function, that forms the closure
+    console.log(name); // use variable declared in the parent function
+  }
+  displayName();
+}
+init();
+
+o/p = Mozilla
+=====================================================>>>>>>>
+
+
+
+function multipler(x){
+    let fn= function(y){
+        return x * y;
+    }
+    return fn; 
+}
+
+
+let multipler2 = multipler(2);
+
+console.log(multipler2);
+console.log(multipler2(3));
+
+o/p == f (y) {
+     return x * y;
+}
+
+o/p = 6;
+
+
 
