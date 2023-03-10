@@ -32,99 +32,6 @@ o/p ===> 0
 2
 The number is 3
 The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
-The number is 3
 The number is 3.....infinite
 
 
@@ -448,3 +355,69 @@ console.log(stack.size());
 
 stack.clear();
 console.log(stack.items);
+
+
+<<<<<<<<<<>>>>>>>>>>=====================================================<<<<<<<<<>>>>>>>>>>>>>>>>
+>Q7: Make this work
+
+function duplicate(arr) {
+  return arr.concat(arr);
+}
+
+duplicate([1, 2, 3, 4, 5]); // [1,2,3,4,5,1,2,3,4,5]
+
+
+<<<<<<<<<<>>>>>>>>>>=====================================================<<<<<<<<<>>>>>>>>>>>>>>>>
+>Q8: Write a "mul" function which will properly when invoked as below syntax
+
+console.log(mul(2)(3)(4)); // output : 24
+console.log(mul(4)(3)(4)); // output : 48
+
+
+function mul (x) {
+  return function (y) { // anonymous function
+    return function (z) { // anonymous function
+      return x * y * z;
+    };
+  };
+}
+
+<<<<<<<<<<>>>>>>>>>>=====================================================<<<<<<<<<>>>>>>>>>>>>>>>>
+>Q9: Write a function that would allow you to do this?
+var addSix = createBase(6);
+addSix(10); // returns 16
+addSix(21); // returns 27
+
+
+funcation createBase(x){
+    let fn = funcation(y){
+        return x+y;
+    }
+    retrun fn;
+}
+
+let addSix = createBase(6);
+addSix(10);
+addSix(21);
+
+
+<<<<<<<<<<>>>>>>>>>>=====================================================<<<<<<<<<>>>>>>>>>>>>>>>>
+>Q10: FizzBuzz Challenge ---mid
+
+Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5.
+
+for (let i = 1; i <= 100; i++) {
+  let f = i % 3 == 0,
+    b = i % 5 == 0;
+  console.log(f ? (b ? 'FizzBuzz' : 'Fizz') : b ? 'Buzz' : i);
+}
+
+
+<<<<<<<<<<>>>>>>>>>>=====================================================<<<<<<<<<>>>>>>>>>>>>>>>>
+>Q11: Given two strings, return true if they are anagrams of one another  ----->Mid 
+Problem
+For example: Mary is an anagram of Army
+
+
+
+
