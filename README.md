@@ -125,7 +125,7 @@ The number is 3
 The number is 3
 The number is 3
 The number is 3
-The number is 3
+The number is 3.....infinite
 
 
 <<<<<<<>>>>>>>=======================================>>>>>
@@ -160,7 +160,30 @@ init();
 o/p = Mozilla
 =====================================================>>>>>>>
 
+let test = base(2)
+console.log(test(3)) //return 5
+console.log(test(5)) // return 7 
 
+o/p = 5
+o/p =7
+
+Answer;--->
+
+ function base(x){
+    let val = function(y){
+        return x + y;
+    }
+}
+
+let test = base(2)
+console.log(test)===> it will return function 
+  f (y) {
+     return x * y;  //x have 2 value
+}
+console.log(test(3)) ===> 5  //y=3
+console.log(test(5)) ===> 7  //y=5
+
+------------------------------------------
 
 function multipler(x){
     let fn= function(y){
@@ -168,12 +191,12 @@ function multipler(x){
     }
     return fn; 
 }
-
-
 let multipler2 = multipler(2);
-
 console.log(multipler2);
 console.log(multipler2(3));
+
+
+
 
 o/p == f (y) {
      return x * y;
@@ -181,5 +204,247 @@ o/p == f (y) {
 
 o/p = 6;
 
+<<<<<<<<<<>>>>>>>>>>=====================================================<<<<<<<<<>>>>>>>>>>>>>>>>
+
+Q3. What is the difference between innerHTML & innerText?
+innerHTML – It will process an HTML tag if found in a string
+
+innerText – It will not process an HTML tag if found in a string
+
+Q4. What is an event bubbling in JavaScript?
+Event bubbling is a way of event propagation in the HTML DOM API, when an event occurs in an element inside another element, and both elements have registered a handle for that event. With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements. The execution starts from that event and goes to its parent element. Then the execution passes to its parent element and so on till the body element.
 
 
+
+
+<<<<<<<<<<>>>>>>>>>>=====================================================<<<<<<<<<>>>>>>>>>>>>>>>>
+>callback function
+
+function modifyArray(arr, hello) {
+    console.log(arr)
+    hello();
+}
+
+var arr = [1, 2, 3, 4, 5];
+modifyArray(arr, ()=>{console.log("hi")});
+
+<<<<<<<<<<>>>>>>>>>>=====================================================<<<<<<<<<>>>>>>>>>>>>>>>>
+>
+Q2: Given a string, reverse each word in the sentence
+
+
+var string = "Welcome to this Javascript Guide!";
+
+// Output becomes !ediuG tpircsavaJ siht ot emocleW
+var reverseEntireSentence = reverseBySeparator(string, "");
+
+// Output becomes emocleW ot siht tpircsavaJ !ediuG
+var reverseEachWord = reverseBySeparator(reverseEntireSentence, " ");
+
+function reverseBySeparator(string, separator) {
+  return string.split(separator).reverse().join(separator);
+}
+
+
+
+<<<<<<<<<<>>>>>>>>>>=====================================================<<<<<<<<<>>>>>>>>>>>>>>>>
+>
+Q3: How to check if an object is an array or not? Provide some code.
+
+
+function greet(param) {
+   if(typeof param === 'string') {
+       console.log("Hi")
+   }
+   else {
+         console.log("Hi1")
+   }
+ }
+ 
+ 
+ var arrayList = [1 , 2, 3];
+ 
+ greet(arrayList);
+
+
+--->isArray() method is used to check if an object is an array. The Array. isArray() method returns true if an object is an array, otherwise returns false . Note: For an array, the typeof operator returns an object.
+
+
+var arrayList = [1,2,3]
+Array.isArray(arrayList);
+
+
+
+
+<<<<<<<<<<>>>>>>>>>>=====================================================<<<<<<<<<>>>>>>>>>>>>>>>>
+>
+Q4: How to empty an array in JavaScript?
+
+method: 1====>
+
+var arrayList = ['a', 'b', 'c', 'd', 'e', 'f']; // Created array
+var anotherArrayList = arrayList;  // Referenced arrayList by another variable
+arrayList = []; // Empty the array
+console.log(anotherArrayList); // Output ['a', 'b', 'c', 'd', 'e', 'f']
+
+
+
+method: 2====>
+
+var arrayList = ['a', 'b', 'c', 'd', 'e', 'f']; // Created array
+var anotherArrayList = arrayList;  // Referenced arrayList by another variable
+arrayList.length = 0; // Empty the array by setting length to 0
+console.log(anotherArrayList); // Output []
+
+method: 3====>
+
+var arrayList = ['a', 'b', 'c', 'd', 'e', 'f']; // Created array
+var anotherArrayList = arrayList;  // Referenced arrayList by another variable
+arrayList.splice(0, arrayList.length); // Empty the array by setting length to 0
+console.log(anotherArrayList); // Output []
+
+
+method: 4====>
+
+while(arrayList.length) {
+  arrayList.pop();
+}
+
+
+<<<<<<<<<<>>>>>>>>>>=====================================================<<<<<<<<<>>>>>>>>>>>>>>>>
+>
+Q5: How would you check if a number is an integer or decimal?
+
+function isInt(num) {
+  return num % 1 === 0;
+}
+
+console.log(isInt(4)); // true
+console.log(isInt(12.2)); // false
+console.log(isInt(0.3)); // false
+
+<<<<<<<<<<>>>>>>>>>>=====================================================<<<<<<<<<>>>>>>>>>>>>>>>>
+>
+Q6: Implement enqueue and dequeue using only two stacks
+
+Enqueue means to add an element, dequeue to remove an element.
+
+// program to implement queue data structure
+
+class Queue {
+    constructor() {
+        this.items = [];
+    }
+    
+    // add element to the queue
+    enqueue(element) {
+        return this.items.push(element);
+    }
+    
+    // remove element from the queue
+    dequeue() {
+        if(this.items.length > 0) {
+            return this.items.shift();
+        }
+    }
+    
+    // view the last element
+    peek() {
+        return this.items[this.items.length - 1];
+    }
+    
+    // check if the queue is empty
+    isEmpty(){
+       return this.items.length == 0;
+    }
+   
+    // the size of the queue
+    size(){
+        return this.items.length;
+    }
+ 
+    // empty the queue
+    clear(){
+        this.items = [];
+    }
+}
+
+let queue = new Queue();
+queue.enqueue(1);
+queue.enqueue(2);
+queue.enqueue(4);
+queue.enqueue(8);
+console.log(queue.items);
+
+queue.dequeue();
+console.log(queue.items);
+
+console.log(queue.peek());
+
+console.log(queue.isEmpty());
+
+console.log(queue.size());
+
+queue.clear();
+console.log(queue.items);
+
+
+Q7: Stack
+
+// program to implement stack data structure
+class Stack {
+    constructor() {
+        this.items = [];
+    }
+    
+    // add element to the stack
+    add(element) {
+        return this.items.push(element);
+    }
+    
+    // remove element from the stack
+    remove() {
+        if(this.items.length > 0) {
+            return this.items.pop();
+        }
+    }
+    
+    // view the last element
+    peek() {
+        return this.items[this.items.length - 1];
+    }
+    
+    // check if the stack is empty
+    isEmpty(){
+       return this.items.length == 0;
+    }
+   
+    // the size of the stack
+    size(){
+        return this.items.length;
+    }
+ 
+    // empty the stack
+    clear(){
+        this.items = [];
+    }
+}
+
+let stack = new Stack();
+stack.add(1);
+stack.add(2);
+stack.add(4);
+stack.add(8);
+console.log(stack.items);
+
+stack.remove();
+console.log(stack.items);
+
+console.log(stack.peek());
+
+console.log(stack.isEmpty());
+
+console.log(stack.size());
+
+stack.clear();
+console.log(stack.items);
